@@ -27,7 +27,7 @@ async function bootstrap() {
       <html>
         <head>
           <title>API Docs</title>
-          <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist/swagger- ui.css" />
+          <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist/swagger-ui.css" />
         </head>
         <body>
           <div id="swagger-ui"></div>
