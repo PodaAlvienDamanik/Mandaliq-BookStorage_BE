@@ -1,9 +1,11 @@
-    import { IsNotEmpty, IsString } from 'class-validator';
-    import { ApiProperty } from '@nestjs/swagger';
 
-    export class CreateCategoryBookDTO {
+// DTO: CreateCategoryDTO
+import { ApiProperty } from "@nestjs/swagger";
+import { IsNotEmpty, IsNumber, IsString } from "class-validator";
+
+export class CreateCategoryDTO {
     @IsString()
     @IsNotEmpty()
-    @ApiProperty({ example: 'Fiction' })
+    @ApiProperty()
     name: string;
-    }
+}

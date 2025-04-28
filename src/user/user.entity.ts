@@ -35,6 +35,4 @@ export class User {
   @UpdateDateColumn()
   updated_at: Date;
 
-  @OneToMany(() => Wishlist, wishlist => wishlist.user)
-  wishlists: Wishlist[];
 }

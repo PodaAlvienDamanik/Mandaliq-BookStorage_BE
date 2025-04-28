@@ -1,9 +1,18 @@
-// create-wishlist.dto.ts
-import { IsNumber } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
+import { IsNotEmpty, IsNumber, IsInt, Min } from 'class-validator';
 
 export class CreateWishlistDTO {
-  @IsNumber()
-  @ApiProperty({ example: 1 })
-  book_id: number;
+    // Remove title and author
+    // @IsString() ... title: string;
+    // @IsString() ... author: string;
+
+    @IsNumber()
+    @IsNotEmpty()
+    @IsInt()
+    @Min(1)
+    @ApiProperty({
+        description: 'The ID of the Book to add to the wishlist',
+        example: 15,
+    })
+    bookId: number; // Accept the Book's ID
 }

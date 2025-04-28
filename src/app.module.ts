@@ -9,7 +9,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { BookModule } from './book/book.module';
-import { CategoryBookModule } from './categorybook/category.module';
+import { CategoryModule } from './categorybook/category.module';
 import { WishlistModule } from './wishlist/wishlist.module';
 
 @Module({
@@ -36,7 +36,7 @@ import { WishlistModule } from './wishlist/wishlist.module';
     AuthModule,
     UserModule,
     BookModule,
-    CategoryBookModule,
+    CategoryModule,
     WishlistModule
   ],
   controllers: [AppController],
