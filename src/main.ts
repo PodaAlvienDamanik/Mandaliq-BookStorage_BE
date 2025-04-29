@@ -9,7 +9,7 @@ async function bootstrap() {
   app.enableCors();
 
   const config = new DocumentBuilder()
-    .setTitle('Mandaliq Book Storage')
+    .setTitle('Mandaliqu Book Storage')
     .addBearerAuth()
     .addSecurityRequirements('bearer')
     .build();
