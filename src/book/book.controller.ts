@@ -20,7 +20,7 @@
     import { UpdateBookDTO } from './UpdateBookDto';
 
 
-    @ApiTags('Books') // Group in Swagger
+    @ApiTags('Books') 
     @Controller('books')
     export class BookController {
     constructor(private readonly bookService: BookService) {}
@@ -31,8 +31,6 @@
     @ApiResponse({ status: HttpStatus.BAD_REQUEST, description: 'Invalid input data.' })
     @ApiResponse({ status: HttpStatus.NOT_FOUND, description: 'Category specified not found.' })
     async create(@Body() createBookDto: CreateBookDTO): Promise<Book> {
-        // Directly delegate to the service, passing the DTO
-        // Service will handle entity creation and relationship assignment
         return this.bookService.create(createBookDto); // Assuming service has 'create'
     }
 
